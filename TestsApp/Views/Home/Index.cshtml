@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Test Web API";
+}
+
+<div class="text-center" style="margin-top:100px" data-bind="visible: model.view() == 'start'">
+    <h1>Тест на знание Web API!</h1>
+    <button class="btn btn-primary" style="margin-top:100px" data-bind="click: showQuestion">Начать тест</button>
+</div>
+
+<div data-bind="visible: model.view() == 'form'">
+    <div class="card">
+        <div class="card-header text-white bg-primary"><h4>Вопрос <span data-bind="text: model.test.number()"></span> из <span data-bind="text: model.totalQuestions()"></span></h4></div>
+        <div class="card-body">
+
+            <div class="form-group">
+                <label data-bind="text: model.test.question()" class="form-control border-primary text-primary font-weight-bold"></label>
+
+                <div class="form-control" style="margin-top:15px">
+                    <input type="radio" id="answer_1" name="answer" data-bind="value: model.test.answers()[0]" />
+                    <label for="answer_1" data-bind="text: model.test.answers()[0]"></label>
+                </div>
+
+                <div class="form-control" style="margin-top:15px">
+                    <input type="radio" id="answer_2" name="answer" data-bind="value: model.test.answers()[1]" />
+                    <label for="answer_2" data-bind="text: model.test.answers()[1]"></label>
+                </div>
+
+                <div class="form-control" style="margin-top:15px">
+                    <input type="radio" id="answer_3" name="answer" data-bind="value: model.test.answers()[2]" />
+                    <label for="answer_3" data-bind="text: model.test.answers()[2]"></label>
+                </div>
+
+                <div class="form-control" style="margin-top:15px">
+                    <input type="radio" id="answer_4" name="answer" data-bind="value: model.test.answers()[3]" />
+                    <label for="answer_4" data-bind="text: model.test.answers()[3]"></label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary" data-bind="click: sendAnswer">Ответить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-bind="visible: model.view() == 'result'">
+    <div class="card">
+        <div class="card-header text-white bg-primary h1">
+            Твой результат!
+        </div>
+
+        <div class="card-body h4">
+            Всего вопросов:
+            <span data-bind="text: model.totalQuestions()"></span><br />
+            Правильных ответов:
+            <span data-bind="text: model.numberOfCorrectAnswers()"></span>
+        </div>
+    </div>
+
+    <br />
+    <div>
+        @Html.ActionLink("Пройти тест еще раз", "Index", "Home", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
