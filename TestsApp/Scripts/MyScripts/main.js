@@ -34,6 +34,9 @@ var showQuestion = function () {
             model.view("form");
             // Выбираем первый вариант по умолчанию
             $('#answer_1').prop('checked', true);
+        },
+        beforeSend: function () {
+            $('#wait').text('Загрузка теста. Подождите... ');
         }
     });
 };
@@ -80,4 +83,7 @@ var getResult = function () {
 
 $(document).ready(function () {
     ko.applyBindings();
+    $.ajax("/api/TestWebAPI", {
+        type: "HEAD"
+    });
 });

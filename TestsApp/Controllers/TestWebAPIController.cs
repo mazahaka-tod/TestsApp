@@ -38,5 +38,10 @@ namespace TestsApp.Controllers {
             // Возвращаем количесто правильных ответов
             return numberOfCorrectAnswers;
         }
+
+        public void Head() {
+            if (numberOfCorrectAnswers == 0)
+                db.Answers.FirstOrDefault();
+        }
     }
 }

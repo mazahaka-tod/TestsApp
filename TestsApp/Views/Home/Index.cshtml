@@ -5,6 +5,7 @@
 <div class="text-center" style="margin-top:100px" data-bind="visible: model.view() == 'start'">
     <h1>Тест на знание Web API!</h1>
     <button class="btn btn-primary" style="margin-top:100px" data-bind="click: showQuestion">Начать тест</button>
+    <div id="wait" style="margin-top:20px"></div>
 </div>
 
 <div data-bind="visible: model.view() == 'form'">
@@ -13,7 +14,9 @@
         <div class="card-body">
 
             <div class="form-group">
-                <label data-bind="text: model.test.question()" class="form-control border-primary text-primary font-weight-bold"></label>
+                <div class="form-control border-primary text-primary font-weight-bold" style="height:60px;">
+                    <label data-bind="text: model.test.question()"></label>
+                </div>
 
                 <div class="form-control" style="margin-top:15px">
                     <input type="radio" id="answer_1" name="answer" data-bind="value: model.test.answers()[0]" />
