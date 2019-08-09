@@ -184,9 +184,13 @@
     </Compile>
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\AnswerViewModel.cs" />
+    <Compile Include="Models\FriendsVK.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\QuestionViewModel.cs" />
     <Compile Include="Models\TestContext.cs" />
+    <Compile Include="Models\TokenVK.cs" />
+    <Compile Include="Models\UserVK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +198,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,7 +231,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51528</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51528/</IISUrl>
+          <IISUrl>http://localhost:3000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,5 +1,5 @@
 ﻿var model = {
-    view: ko.observable("start"),               // отображаемое представление
+    view: ko.observable(""),                    // отображаемое представление
     test: {
         number: ko.observable(0),               // номер вопроса
         question: ko.observable(""),            // сам вопрос
