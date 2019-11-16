@@ -1,5 +1,5 @@
 ﻿var model = {
-    view: ko.observable(""),                    // отображаемое представление
+    view: ko.observable("start"),               // отображаемое представление
     test: {
         number: ko.observable(0),               // номер вопроса
         question: ko.observable(""),            // сам вопрос
@@ -83,7 +83,7 @@ var getResult = function () {
 
 $(document).ready(function () {
     ko.applyBindings();
-    $.ajax("/api/TestWebAPI", {
-        type: "HEAD"
-    });
+    //$.ajax("/api/TestWebAPI", {
+    //    type: "HEAD"
+    //});
 });

@@ -57,249 +57,249 @@ namespace TestsApp.Models {
                 CorrectAnswer = "DELETE"
             });
 
-            // Вопрос 7
-            db.Questions.Add(new Question {
-                Id = 7,
-                Name = "Безопасным глаголом является ...",
-                CorrectAnswer = "HEAD"
-            });
+            //// Вопрос 7
+            //db.Questions.Add(new Question {
+            //    Id = 7,
+            //    Name = "Безопасным глаголом является ...",
+            //    CorrectAnswer = "HEAD"
+            //});
 
-            // Вопрос 8
-            db.Questions.Add(new Question {
-                Id = 8,
-                Name = "Идемпотентным (но небезопасным) глаголом является ...",
-                CorrectAnswer = "PUT"
-            });
+            //// Вопрос 8
+            //db.Questions.Add(new Question {
+            //    Id = 8,
+            //    Name = "Идемпотентным (но небезопасным) глаголом является ...",
+            //    CorrectAnswer = "PUT"
+            //});
 
-            // Вопрос 9
-            db.Questions.Add(new Question {
-                Id = 9,
-                Name = "Web API контроллеры используют пространство имен ...",
-                CorrectAnswer = "System.Web.Http"
-            });
+            //// Вопрос 9
+            //db.Questions.Add(new Question {
+            //    Id = 9,
+            //    Name = "Web API контроллеры используют пространство имен ...",
+            //    CorrectAnswer = "System.Web.Http"
+            //});
 
-            // Вопрос 10
-            db.Questions.Add(new Question {
-                Id = 10,
-                Name = "Какой из классов не относится к Web API?",
-                CorrectAnswer = "HttpApplication"
-            });
+            //// Вопрос 10
+            //db.Questions.Add(new Question {
+            //    Id = 10,
+            //    Name = "Какой из классов не относится к Web API?",
+            //    CorrectAnswer = "HttpApplication"
+            //});
 
-            // Вопрос 11
-            db.Questions.Add(new Question {
-                Id = 11,
-                Name = "Пространство имен System.Net.Http содержит ...",
-                CorrectAnswer = "типы, которые представляют HTTP-запросы и ответы"
-            });
+            //// Вопрос 11
+            //db.Questions.Add(new Question {
+            //    Id = 11,
+            //    Name = "Пространство имен System.Net.Http содержит ...",
+            //    CorrectAnswer = "типы, которые представляют HTTP-запросы и ответы"
+            //});
 
-            // Вопрос 12
-            db.Questions.Add(new Question {
-                Id = 12,
-                Name = "Какое из свойств не определяет класс ApiController?",
-                CorrectAnswer = "ViewBag"
-            });
+            //// Вопрос 12
+            //db.Questions.Add(new Question {
+            //    Id = 12,
+            //    Name = "Какое из свойств не определяет класс ApiController?",
+            //    CorrectAnswer = "ViewBag"
+            //});
 
-            // Вопрос 13
-            db.Questions.Add(new Question {
-                Id = 13,
-                Name = "Какое из свойств не определяет класс HttpRequestMessage?",
-                CorrectAnswer = "HttpMethod"
-            });
+            //// Вопрос 13
+            //db.Questions.Add(new Question {
+            //    Id = 13,
+            //    Name = "Какое из свойств не определяет класс HttpRequestMessage?",
+            //    CorrectAnswer = "HttpMethod"
+            //});
 
-            // Вопрос 14
-            db.Questions.Add(new Question {
-                Id = 14,
-                Name = "Какое из свойств не определяет класс HttpRequestContext?",
-                CorrectAnswer = "IsAuthenticated"
-            });
+            //// Вопрос 14
+            //db.Questions.Add(new Question {
+            //    Id = 14,
+            //    Name = "Какое из свойств не определяет класс HttpRequestContext?",
+            //    CorrectAnswer = "IsAuthenticated"
+            //});
 
-            // Вопрос 15
-            db.Questions.Add(new Question {
-                Id = 15,
-                Name = "Какое из свойств не определяет класс HttpControllerContext?",
-                CorrectAnswer = "HttpContext"
-            });
+            //// Вопрос 15
+            //db.Questions.Add(new Question {
+            //    Id = 15,
+            //    Name = "Какое из свойств не определяет класс HttpControllerContext?",
+            //    CorrectAnswer = "HttpContext"
+            //});
 
-            // Вопрос 16
-            db.Questions.Add(new Question {
-                Id = 16,
-                Name = "Конфигурация Web API выполняется в файле ...",
-                CorrectAnswer = "App_Start/WebApiConfig.cs"
-            });
+            //// Вопрос 16
+            //db.Questions.Add(new Question {
+            //    Id = 16,
+            //    Name = "Конфигурация Web API выполняется в файле ...",
+            //    CorrectAnswer = "App_Start/WebApiConfig.cs"
+            //});
 
-            // Вопрос 17
-            db.Questions.Add(new Question {
-                Id = 17,
-                Name = "Экземпляр класса HttpConfiguration доступен через ...",
-                CorrectAnswer = "все указанные свойства"
-            });
+            //// Вопрос 17
+            //db.Questions.Add(new Question {
+            //    Id = 17,
+            //    Name = "Экземпляр класса HttpConfiguration доступен через ...",
+            //    CorrectAnswer = "все указанные свойства"
+            //});
 
-            // Вопрос 18
-            db.Questions.Add(new Question {
-                Id = 18,
-                Name = "Какое из свойств не определяет класс HttpConfiguration?",
-                CorrectAnswer = "Url"
-            });
+            //// Вопрос 18
+            //db.Questions.Add(new Question {
+            //    Id = 18,
+            //    Name = "Какое из свойств не определяет класс HttpConfiguration?",
+            //    CorrectAnswer = "Url"
+            //});
 
 
 
             // Варианты ответов
             IEnumerable<Answer> answerOptions = new List<Answer> {
-                new Answer {
-                    QuestionId = 18,
-                    AnswerOption = "DependencyResolver" },
-                new Answer {
-                    QuestionId = 18,
-                    AnswerOption = "Filters" },
-                new Answer {
-                    QuestionId = 18,
-                    AnswerOption = "Routes" },
-                new Answer {
-                    QuestionId = 18,
-                    AnswerOption = "Url" },
+                //new Answer {
+                //    QuestionId = 18,
+                //    AnswerOption = "DependencyResolver" },
+                //new Answer {
+                //    QuestionId = 18,
+                //    AnswerOption = "Filters" },
+                //new Answer {
+                //    QuestionId = 18,
+                //    AnswerOption = "Routes" },
+                //new Answer {
+                //    QuestionId = 18,
+                //    AnswerOption = "Url" },
 
-                new Answer {
-                    QuestionId = 17,
-                    AnswerOption = "статическое свойство Configuration класса GlobalConfiguration" },
-                new Answer {
-                    QuestionId = 17,
-                    AnswerOption = "свойство Configuration класса HttpControllerContext" },
-                new Answer {
-                    QuestionId = 17,
-                    AnswerOption = "свойство Configuration класса ApiController" },
-                new Answer {
-                    QuestionId = 17,
-                    AnswerOption = "все указанные свойства" },
+                //new Answer {
+                //    QuestionId = 17,
+                //    AnswerOption = "статическое свойство Configuration класса GlobalConfiguration" },
+                //new Answer {
+                //    QuestionId = 17,
+                //    AnswerOption = "свойство Configuration класса HttpControllerContext" },
+                //new Answer {
+                //    QuestionId = 17,
+                //    AnswerOption = "свойство Configuration класса ApiController" },
+                //new Answer {
+                //    QuestionId = 17,
+                //    AnswerOption = "все указанные свойства" },
 
-                new Answer {
-                    QuestionId = 16,
-                    AnswerOption = "App_Start/WebApiConfig.cs" },
-                new Answer {
-                    QuestionId = 16,
-                    AnswerOption = "App_Start/RouteConfig.cs" },
-                new Answer {
-                    QuestionId = 16,
-                    AnswerOption = "Global.asax.cs" },
-                new Answer {
-                    QuestionId = 16,
-                    AnswerOption = "Web.config" },
+                //new Answer {
+                //    QuestionId = 16,
+                //    AnswerOption = "App_Start/WebApiConfig.cs" },
+                //new Answer {
+                //    QuestionId = 16,
+                //    AnswerOption = "App_Start/RouteConfig.cs" },
+                //new Answer {
+                //    QuestionId = 16,
+                //    AnswerOption = "Global.asax.cs" },
+                //new Answer {
+                //    QuestionId = 16,
+                //    AnswerOption = "Web.config" },
 
-                new Answer {
-                    QuestionId = 15,
-                    AnswerOption = "HttpContext" },
-                new Answer {
-                    QuestionId = 15,
-                    AnswerOption = "Configuration" },
-                new Answer {
-                    QuestionId = 15,
-                    AnswerOption = "Request" },
-                new Answer {
-                    QuestionId = 15,
-                    AnswerOption = "RequestContext" },
+                //new Answer {
+                //    QuestionId = 15,
+                //    AnswerOption = "HttpContext" },
+                //new Answer {
+                //    QuestionId = 15,
+                //    AnswerOption = "Configuration" },
+                //new Answer {
+                //    QuestionId = 15,
+                //    AnswerOption = "Request" },
+                //new Answer {
+                //    QuestionId = 15,
+                //    AnswerOption = "RequestContext" },
 
-                new Answer {
-                    QuestionId = 14,
-                    AnswerOption = "IsAuthenticated" },
-                new Answer {
-                    QuestionId = 14,
-                    AnswerOption = "Configuration" },
-                new Answer {
-                    QuestionId = 14,
-                    AnswerOption = "IsLocal" },
-                new Answer {
-                    QuestionId = 14,
-                    AnswerOption = "RouteData" },
+                //new Answer {
+                //    QuestionId = 14,
+                //    AnswerOption = "IsAuthenticated" },
+                //new Answer {
+                //    QuestionId = 14,
+                //    AnswerOption = "Configuration" },
+                //new Answer {
+                //    QuestionId = 14,
+                //    AnswerOption = "IsLocal" },
+                //new Answer {
+                //    QuestionId = 14,
+                //    AnswerOption = "RouteData" },
 
-                new Answer {
-                    QuestionId = 13,
-                    AnswerOption = "HttpMethod" },
-                new Answer {
-                    QuestionId = 13,
-                    AnswerOption = "Content" },
-                new Answer {
-                    QuestionId = 13,
-                    AnswerOption = "Headers" },
-                new Answer {
-                    QuestionId = 13,
-                    AnswerOption = "Properties" },
+                //new Answer {
+                //    QuestionId = 13,
+                //    AnswerOption = "HttpMethod" },
+                //new Answer {
+                //    QuestionId = 13,
+                //    AnswerOption = "Content" },
+                //new Answer {
+                //    QuestionId = 13,
+                //    AnswerOption = "Headers" },
+                //new Answer {
+                //    QuestionId = 13,
+                //    AnswerOption = "Properties" },
 
-                new Answer {
-                    QuestionId = 12,
-                    AnswerOption = "ViewBag" },
-                new Answer {
-                    QuestionId = 12,
-                    AnswerOption = "ControllerContext" },
-                new Answer {
-                    QuestionId = 12,
-                    AnswerOption = "ModelState" },
-                new Answer {
-                    QuestionId = 12,
-                    AnswerOption = "Request" },
+                //new Answer {
+                //    QuestionId = 12,
+                //    AnswerOption = "ViewBag" },
+                //new Answer {
+                //    QuestionId = 12,
+                //    AnswerOption = "ControllerContext" },
+                //new Answer {
+                //    QuestionId = 12,
+                //    AnswerOption = "ModelState" },
+                //new Answer {
+                //    QuestionId = 12,
+                //    AnswerOption = "Request" },
 
-                new Answer {
-                    QuestionId = 11,
-                    AnswerOption = "типы, которые представляют HTTP-запросы и ответы" },
-                new Answer {
-                    QuestionId = 11,
-                    AnswerOption = "базовый класс Web API контроллеров ApiController" },
-                new Answer {
-                    QuestionId = 11,
-                    AnswerOption = "классы, которые обеспечивают внедрение зависимостей" },
-                new Answer {
-                    QuestionId = 11,
-                    AnswerOption = "классы, которые используются для валидации данных" },
+                //new Answer {
+                //    QuestionId = 11,
+                //    AnswerOption = "типы, которые представляют HTTP-запросы и ответы" },
+                //new Answer {
+                //    QuestionId = 11,
+                //    AnswerOption = "базовый класс Web API контроллеров ApiController" },
+                //new Answer {
+                //    QuestionId = 11,
+                //    AnswerOption = "классы, которые обеспечивают внедрение зависимостей" },
+                //new Answer {
+                //    QuestionId = 11,
+                //    AnswerOption = "классы, которые используются для валидации данных" },
 
-                new Answer {
-                    QuestionId = 10,
-                    AnswerOption = "HttpApplication" },
-                new Answer {
-                    QuestionId = 10,
-                    AnswerOption = "HttpRequestContext" },
-                new Answer {
-                    QuestionId = 10,
-                    AnswerOption = "HttpResponseMessage" },
-                new Answer {
-                    QuestionId = 10,
-                    AnswerOption = "HttpConfiguration" },
+                //new Answer {
+                //    QuestionId = 10,
+                //    AnswerOption = "HttpApplication" },
+                //new Answer {
+                //    QuestionId = 10,
+                //    AnswerOption = "HttpRequestContext" },
+                //new Answer {
+                //    QuestionId = 10,
+                //    AnswerOption = "HttpResponseMessage" },
+                //new Answer {
+                //    QuestionId = 10,
+                //    AnswerOption = "HttpConfiguration" },
 
-                new Answer {
-                    QuestionId = 9,
-                    AnswerOption = "System.Web" },
-                new Answer {
-                    QuestionId = 9,
-                    AnswerOption = "System.Web.MVC" },
-                new Answer {
-                    QuestionId = 9,
-                    AnswerOption = "System.Web.Http" },
-                new Answer {
-                    QuestionId = 9,
-                    AnswerOption = "Все из указанных" },
+                //new Answer {
+                //    QuestionId = 9,
+                //    AnswerOption = "System.Web" },
+                //new Answer {
+                //    QuestionId = 9,
+                //    AnswerOption = "System.Web.MVC" },
+                //new Answer {
+                //    QuestionId = 9,
+                //    AnswerOption = "System.Web.Http" },
+                //new Answer {
+                //    QuestionId = 9,
+                //    AnswerOption = "Все из указанных" },
 
-                new Answer {
-                    QuestionId = 8,
-                    AnswerOption = "GET" },
-                new Answer {
-                    QuestionId = 8,
-                    AnswerOption = "HEAD" },
-                new Answer {
-                    QuestionId = 8,
-                    AnswerOption = "POST" },
-                new Answer {
-                    QuestionId = 8,
-                    AnswerOption = "PUT" },
+                //new Answer {
+                //    QuestionId = 8,
+                //    AnswerOption = "GET" },
+                //new Answer {
+                //    QuestionId = 8,
+                //    AnswerOption = "HEAD" },
+                //new Answer {
+                //    QuestionId = 8,
+                //    AnswerOption = "POST" },
+                //new Answer {
+                //    QuestionId = 8,
+                //    AnswerOption = "PUT" },
 
-                new Answer {
-                    QuestionId = 7,
-                    AnswerOption = "HEAD" },
-                new Answer {
-                    QuestionId = 7,
-                    AnswerOption = "POST" },
-                new Answer {
-                    QuestionId = 7,
-                    AnswerOption = "PUT" },
-                new Answer {
-                    QuestionId = 7,
-                    AnswerOption = "DELETE" },
+                //new Answer {
+                //    QuestionId = 7,
+                //    AnswerOption = "HEAD" },
+                //new Answer {
+                //    QuestionId = 7,
+                //    AnswerOption = "POST" },
+                //new Answer {
+                //    QuestionId = 7,
+                //    AnswerOption = "PUT" },
+                //new Answer {
+                //    QuestionId = 7,
+                //    AnswerOption = "DELETE" },
 
                 new Answer {
                     QuestionId = 6,

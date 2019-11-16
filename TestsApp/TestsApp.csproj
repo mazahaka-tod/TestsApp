@@ -184,13 +184,9 @@
     </Compile>
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\AnswerViewModel.cs" />
-    <Compile Include="Models\FriendsVK.cs" />
-    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\QuestionViewModel.cs" />
     <Compile Include="Models\TestContext.cs" />
-    <Compile Include="Models\TokenVK.cs" />
-    <Compile Include="Models\UserVK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

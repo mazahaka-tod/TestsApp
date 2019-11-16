@@ -1,35 +1,8 @@
-﻿@model TestsApp.Models.IndexViewModel
-@{
+﻿@{
     ViewBag.Title = "Test Web API";
 }
 
-<div class="text-center" style="margin-top:250px" data-bind="visible: model.view() == 'noauth'">
-    @Html.ActionLink("Авторизоваться", "Login", null, new { @class = "btn btn-primary" })
-</div>
-
-
-@if (Model != null && Model.UserVK != null && Model.FriendsVK != null) {
-    <div style="margin-bottom:20px" data-bind="visible: model.view() != 'noauth' && model.view() != ''">
-        <div>
-            <h4>Добро пожаловать, @Model.UserVK.Response.FirstOrDefault().Last_name @Model.UserVK.Response.FirstOrDefault().First_name</h4>
-            <br />
-            @if (Model.FriendsVK.Response.Count != 0) {
-                <h5>Список друзей</h5>
-                <ol>
-                    @foreach (var item in Model.FriendsVK.Response.Items) {
-                        <li>@item.Last_name @item.First_name</li>
-                    }
-                </ol>
-            }
-            else {
-                <h4>У Вас нет друзей</h4>
-            }
-        </div>
-        @Html.ActionLink("Выйти", "Logout", null, new { @class = "btn btn-dark" })
-    </div>
-}
-
-<div class="text-center" data-bind="visible: model.view() == 'start'">
+<div class="text-center" style="margin-top:100px" data-bind="visible: model.view() == 'start'">
     <h1>Тест на знание Web API!</h1>
     <button class="btn btn-primary" style="margin-top:100px" data-bind="click: showQuestion">Начать тест</button>
     <div id="wait" style="margin-top:20px"></div>
@@ -92,11 +65,3 @@
         @Html.ActionLink("Пройти тест еще раз", "Index", "Home", null, new { @class = "btn btn-primary" })
     </div>
 </div>
-
-@section scripts {
-    <script>
-        $(document).ready(function () {
-            model.view("@Model.View")
-        });
-    </script>
-}

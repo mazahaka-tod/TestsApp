@@ -1,11 +1,16 @@
 ﻿using System.Linq;
+using System.Web;
 using System.Web.Http;
 using TestsApp.Models;
 
 namespace TestsApp.Controllers {
     public class TestWebAPIController : ApiController {
-        private TestContext db = new TestContext();
-        private static int numberOfCorrectAnswers;
+
+        private static TestContext db = new TestContext();
+
+        static TestWebAPIController() {
+            db.Answers.FirstOrDefault();
+        }
 
         public QuestionViewModel GetQuestion(int id) {
             // Получаем вопрос из базы
@@ -21,27 +26,28 @@ namespace TestsApp.Controllers {
                 // Отправляем клиенту общее количество вопросов в базе
                 questionViewModel.TotalQuestions = db.Questions.Count();
                 // Сбрасываем счетчик правильных ответов
-                numberOfCorrectAnswers = 0;
+                HttpContext.Current.Session["numberOfCorrectAnswers"] = 0;
             }
             return questionViewModel;
         }
 
         public void PostAnswer(AnswerViewModel answer) {
             Question question = db.Questions.Find(answer.Number);
-            // Проверяем ответ пользователя
+            // Если ответ пользователя правильный
             if (answer.Answer == question.CorrectAnswer) {
-                numberOfCorrectAnswers++;
+                int numberOfCorrectAnswers = (int)HttpContext.Current.Session["numberOfCorrectAnswers"];
+                HttpContext.Current.Session["numberOfCorrectAnswers"] = numberOfCorrectAnswers + 1;
             }
         }
 
         public int GetResult() {
             // Возвращаем количесто правильных ответов
-            return numberOfCorrectAnswers;
+            return (int)HttpContext.Current.Session["numberOfCorrectAnswers"];
         }
 
-        public void Head() {
-            if (numberOfCorrectAnswers == 0)
-                db.Answers.FirstOrDefault();
-        }
+        //public void Head() {
+        //    if (HttpContext.Current.Session["numberOfCorrectAnswers"] == null)
+        //        db.Answers.FirstOrDefault();
+        //}
     }
 }
