@@ -9,11 +9,11 @@ namespace TestsApp.Models {
         public TestContext() : base("TestDb") { }
 
         static TestContext() {
-            //Database.SetInitializer(new TestContextInitializer());
+            Database.SetInitializer(new TestContextInitializer());
         }
     }
 
-    public class TestContextInitializer : DropCreateDatabaseAlways<TestContext> {
+    public class TestContextInitializer : DropCreateDatabaseIfModelChanges<TestContext> {
         protected override void Seed(TestContext db) {
             // Вопрос 1
             db.Questions.Add(new Question {
