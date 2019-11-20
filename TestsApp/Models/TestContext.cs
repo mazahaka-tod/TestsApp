@@ -57,12 +57,13 @@ namespace TestsApp.Models {
                 CorrectAnswer = "DELETE"
             });
 
-            //// Вопрос 7
-            //db.Questions.Add(new Question {
-            //    Id = 7,
-            //    Name = "Безопасным глаголом является ...",
-            //    CorrectAnswer = "HEAD"
-            //});
+            // Вопрос 7
+            db.Questions.Add(new Question
+            {
+                Id = 7,
+                Name = "Безопасным глаголом является ...",
+                CorrectAnswer = "HEAD"
+            });
 
             //// Вопрос 8
             //db.Questions.Add(new Question {
