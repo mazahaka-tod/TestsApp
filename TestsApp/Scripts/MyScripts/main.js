@@ -6,13 +6,18 @@
         answers: ko.observableArray([])         // варианты ответов
     },
     totalQuestions: ko.observable(0),           // всего вопросов в тесте
+    testNumber: ko.observable($('#test_number').val()),     // номер теста
     numberOfCorrectAnswers: ko.observable(0)    // количество правильных ответов
 };
 
 var showQuestion = function () {
+    var _id = model.test.number() + 1;
+    if (model.testNumber() === "2") {
+        _id += 100;
+    }
     $.ajax("/api/TestWebAPI", {
         type: "GET",
-        data: { id: model.test.number() + 1 },
+        data: { id: _id, testnumber: model.testNumber() },
         success: function (data) {
             // Считываем общее количество вопросов в модель
             if (model.test.number() === 0) {
@@ -52,10 +57,14 @@ var shuffle = function (answers) {
 };
 
 var sendAnswer = function () {
+    var _id = model.test.number();
+    if (model.testNumber() === "2") {
+        _id += 100;
+    }
     $.ajax("/api/TestWebAPI", {
         type: "POST",
         data: {
-            number: model.test.number(),
+            number: _id,
             answer: $(':radio:checked').val()
         },
         success: function () {
@@ -83,9 +92,12 @@ var getResult = function () {
 
 $(document).ready(function () {
     ko.applyBindings();
-    //$.ajax("/api/TestWebAPI", {
-    //    type: "HEAD"
-    //});
-});
 
-// test
+    $('#test_number').change(function () {
+        model.testNumber($(this).val());
+    });
+
+    $.ajax("/api/TestWebAPI", {
+        type: "HEAD"
+    });
+});

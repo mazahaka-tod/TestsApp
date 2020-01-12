@@ -3,8 +3,10 @@
 namespace TestsApp.Models {
     public class Question {
         public int Id { get; set; }
+        public int QuestionNumber { get; set; }
         public string Name { get; set; }
         public string CorrectAnswer { get; set; }
+        public int TestNumber { get; set; }
         public virtual ICollection<Answer> Answers { get; set; }
 
         public Question() {

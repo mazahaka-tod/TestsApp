@@ -1,9 +1,15 @@
 ﻿@{
-    ViewBag.Title = "Test Web API";
+    ViewBag.Title = "Tests";
 }
 
 <div class="text-center" style="margin-top:100px" data-bind="visible: model.view() == 'start'">
-    <h1>Тест на знание Web API!</h1>
+    <div class="form-group">
+        <label for="test_number"><b>Выберите тест:</b></label>
+        <select class="form-control offset-4 col-4" id="test_number">
+            <option selected value="1">Тест на знание Web API</option>
+            <option value="2">Тест на знание T-SQL</option>
+        </select>
+    </div>
     <button class="btn btn-primary" style="margin-top:100px" data-bind="click: showQuestion">Начать тест</button>
     <div id="wait" style="margin-top:20px"></div>
 </div>

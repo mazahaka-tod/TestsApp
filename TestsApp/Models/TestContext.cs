@@ -18,43 +18,55 @@ namespace TestsApp.Models {
             // Вопрос 1
             db.Questions.Add(new Question {
                 Id = 1,
+                QuestionNumber = 1,
                 Name = "Асинхронные методы ...",
-                CorrectAnswer = "Уменьшают производительность отдельного запроса"
+                CorrectAnswer = "Уменьшают производительность отдельного запроса",
+                TestNumber = 1
             });
 
             // Вопрос 2
             db.Questions.Add(new Question {
                 Id = 2,
+                QuestionNumber = 2,
                 Name = "В чем отличие Web API приложения от MVC?",
-                CorrectAnswer = "Отсутствует представление"
+                CorrectAnswer = "Отсутствует представление",
+                TestNumber = 1
             });
 
             // Вопрос 3
             db.Questions.Add(new Question {
                 Id = 3,
+                QuestionNumber = 3,
                 Name = "Какой HTTP глагол используется для получения данных с сервера?",
-                CorrectAnswer = "GET"
+                CorrectAnswer = "GET",
+                TestNumber = 1
             });
 
             // Вопрос 4
             db.Questions.Add(new Question {
                 Id = 4,
+                QuestionNumber = 4,
                 Name = "Какой HTTP глагол используется для создания нового объекта?",
-                CorrectAnswer = "POST"
+                CorrectAnswer = "POST",
+                TestNumber = 1
             });
 
             // Вопрос 5
             db.Questions.Add(new Question {
                 Id = 5,
+                QuestionNumber = 5,
                 Name = "Какой HTTP глагол используется для обновления существующего объекта?",
-                CorrectAnswer = "PUT"
+                CorrectAnswer = "PUT",
+                TestNumber = 1
             });
 
             // Вопрос 6
             db.Questions.Add(new Question {
                 Id = 6,
+                QuestionNumber = 6,
                 Name = "Какой HTTP глагол используется для удаления объекта?",
-                CorrectAnswer = "DELETE"
+                CorrectAnswer = "DELETE",
+                TestNumber = 1
             });
 
             //// Вопрос 7
@@ -380,7 +392,127 @@ namespace TestsApp.Models {
                     AnswerOption = "Уменьшают общую производительность приложения" }
             };
 
+            ////////////////////////////////////// T-SQL
+            // Вопрос 1
+            db.Questions.Add(new Question
+            {
+                Id = 101,
+                QuestionNumber = 101,
+                Name = "Microsoft SQL Server использует следующее процедурное расширение языка SQL ...",
+                CorrectAnswer = "Transact-SQL",
+                TestNumber = 2
+            });
+
+            // Вопрос 2
+            db.Questions.Add(new Question
+            {
+                Id = 102,
+                QuestionNumber = 102,
+                Name = "Transact-SQL расширяет язык SQL, предоставляя следующую дополнительную возможность ...",
+                CorrectAnswer = "все из указанных",
+                TestNumber = 2
+            });
+
+            // Вопрос 3
+            db.Questions.Add(new Question
+            {
+                Id = 103,
+                QuestionNumber = 103,
+                Name = "Выражения языка DDL (Data Definition Language) ...",
+                CorrectAnswer = "используются для создания, изменения или удаления объектов в базе данных",
+                TestNumber = 2
+            });
+
+            // Вопрос 4
+            db.Questions.Add(new Question
+            {
+                Id = 104,
+                QuestionNumber = 104,
+                Name = "Выражения языка DCL (Data Control Language) ...",
+                CorrectAnswer = "предназначены для назначения прав на объекты базы данных",
+                TestNumber = 2
+            });
+
+            // Вопрос 5
+            db.Questions.Add(new Question
+            {
+                Id = 105,
+                QuestionNumber = 105,
+                Name = "Выражения языка DML (Data Manipulation Language) ...",
+                CorrectAnswer = "используются для запросов и изменения данных",
+                TestNumber = 2
+            });
+
+            // Варианты ответов
+            IEnumerable<Answer> answerOptionsSQL = new List<Answer> {
+                new Answer {
+                    QuestionId = 105,
+                    AnswerOption = "используются для создания, изменения или удаления объектов в базе данных" },
+                new Answer {
+                    QuestionId = 105,
+                    AnswerOption = "предназначены для назначения прав на объекты базы данных" },
+                new Answer {
+                    QuestionId = 105,
+                    AnswerOption = "используются для запросов и изменения данных" },
+                new Answer {
+                    QuestionId = 105,
+                    AnswerOption = "нет правильного ответа" },
+
+                new Answer {
+                    QuestionId = 104,
+                    AnswerOption = "используются для создания, изменения или удаления объектов в базе данных" },
+                new Answer {
+                    QuestionId = 104,
+                    AnswerOption = "предназначены для назначения прав на объекты базы данных" },
+                new Answer {
+                    QuestionId = 104,
+                    AnswerOption = "используются для запросов и изменения данных" },
+                new Answer {
+                    QuestionId = 104,
+                    AnswerOption = "нет правильного ответа" },
+
+                new Answer {
+                    QuestionId = 103,
+                    AnswerOption = "используются для создания, изменения или удаления объектов в базе данных" },
+                new Answer {
+                    QuestionId = 103,
+                    AnswerOption = "предназначены для назначения прав на объекты базы данных" },
+                new Answer {
+                    QuestionId = 103,
+                    AnswerOption = "используются для запросов и изменения данных" },
+                new Answer {
+                    QuestionId = 103,
+                    AnswerOption = "нет правильного ответа" },
+
+                new Answer {
+                    QuestionId = 102,
+                    AnswerOption = "управляющие операторы" },
+                new Answer {
+                    QuestionId = 102,
+                    AnswerOption = "локальные и глобальные переменные" },
+                new Answer {
+                    QuestionId = 102,
+                    AnswerOption = "различные дополнительные функции для обработки строк, дат, математики и т.п." },
+                new Answer {
+                    QuestionId = 102,
+                    AnswerOption = "все из указанных" },
+
+                new Answer {
+                    QuestionId = 101,
+                    AnswerOption = "Transact-SQL" },
+                new Answer {
+                    QuestionId = 101,
+                    AnswerOption = "PL/pgSQL" },
+                new Answer {
+                    QuestionId = 101,
+                    AnswerOption = "PL/SQL" },
+                new Answer {
+                    QuestionId = 101,
+                    AnswerOption = "SQL PL" }
+            };
+
             db.Answers.AddRange(answerOptions);
+            db.Answers.AddRange(answerOptionsSQL);
             db.SaveChanges();
         }
     }

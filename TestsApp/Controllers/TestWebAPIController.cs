@@ -12,19 +12,19 @@ namespace TestsApp.Controllers {
             db.Answers.FirstOrDefault();
         }
 
-        public QuestionViewModel GetQuestion(int id) {
+        public QuestionViewModel GetQuestion(int id, int testnumber) {
             // Получаем вопрос из базы
-            Question question = db.Questions.Find(id);
+            Question question = db.Questions.FirstOrDefault(q => q.QuestionNumber == id);
             // Исключаем свойство с правильным ответом CorrectAnswer и преобразуем массив ответов
             QuestionViewModel questionViewModel = new QuestionViewModel {
-                Number = question.Id,
+                Number = question.QuestionNumber % 100,
                 Question = question.Name,
                 Answers = question.Answers.Select(a => a.AnswerOption).ToArray()
             };
             // В начале теста
-            if (id == 1) {
+            if (id % 100 == 1) {
                 // Отправляем клиенту общее количество вопросов в базе
-                questionViewModel.TotalQuestions = db.Questions.Count();
+                questionViewModel.TotalQuestions = db.Questions.Where(q => q.TestNumber == testnumber).Count();
                 // Сбрасываем счетчик правильных ответов
                 HttpContext.Current.Session["numberOfCorrectAnswers"] = 0;
             }
@@ -32,7 +32,7 @@ namespace TestsApp.Controllers {
         }
 
         public void PostAnswer(AnswerViewModel answer) {
-            Question question = db.Questions.Find(answer.Number);
+            Question question = db.Questions.FirstOrDefault(q => q.QuestionNumber == answer.Number);
             // Если ответ пользователя правильный
             if (answer.Answer == question.CorrectAnswer) {
                 int numberOfCorrectAnswers = (int)HttpContext.Current.Session["numberOfCorrectAnswers"];
@@ -45,9 +45,9 @@ namespace TestsApp.Controllers {
             return (int)HttpContext.Current.Session["numberOfCorrectAnswers"];
         }
 
-        //public void Head() {
-        //    if (HttpContext.Current.Session["numberOfCorrectAnswers"] == null)
-        //        db.Answers.FirstOrDefault();
-        //}
+        public void Head() {
+            if (HttpContext.Current.Session["numberOfCorrectAnswers"] == null)
+                db.Answers.FirstOrDefault();
+        }
     }
 }
