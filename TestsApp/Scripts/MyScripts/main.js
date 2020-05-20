@@ -11,10 +11,8 @@
 };
 
 var showQuestion = function () {
-    var _id = model.test.number() + 1;
-    if (model.testNumber() === "2") {
-        _id += 100;
-    }
+    var _id = (model.test.number() + 1) + 100 * (model.testNumber() - 1);
+
     $.ajax("/api/TestWebAPI", {
         type: "GET",
         data: { id: _id, testnumber: model.testNumber() },
@@ -57,10 +55,8 @@ var shuffle = function (answers) {
 };
 
 var sendAnswer = function () {
-    var _id = model.test.number();
-    if (model.testNumber() === "2") {
-        _id += 100;
-    }
+    var _id = model.test.number() + 100 * (model.testNumber() - 1);
+
     $.ajax("/api/TestWebAPI", {
         type: "POST",
         data: {

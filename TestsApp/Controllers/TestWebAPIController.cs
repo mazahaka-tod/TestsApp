@@ -6,7 +6,7 @@ using TestsApp.Models;
 namespace TestsApp.Controllers {
     public class TestWebAPIController : ApiController {
 
-        private static TestContext db = new TestContext();
+        private static readonly TestContext db = new TestContext();
 
         static TestWebAPIController() {
             db.Answers.FirstOrDefault();
@@ -14,10 +14,10 @@ namespace TestsApp.Controllers {
 
         public QuestionViewModel GetQuestion(int id, int testnumber) {
             // Получаем вопрос из базы
-            Question question = db.Questions.FirstOrDefault(q => q.QuestionNumber == id);
+            Question question = db.Questions.FirstOrDefault(q => q.Id == id);
             // Исключаем свойство с правильным ответом CorrectAnswer и преобразуем массив ответов
             QuestionViewModel questionViewModel = new QuestionViewModel {
-                Number = question.QuestionNumber % 100,
+                Number = question.Id % 100,
                 Question = question.Name,
                 Answers = question.Answers.Select(a => a.AnswerOption).ToArray()
             };
@@ -32,7 +32,7 @@ namespace TestsApp.Controllers {
         }
 
         public void PostAnswer(AnswerViewModel answer) {
-            Question question = db.Questions.FirstOrDefault(q => q.QuestionNumber == answer.Number);
+            Question question = db.Questions.FirstOrDefault(q => q.Id == answer.Number);
             // Если ответ пользователя правильный
             if (answer.Answer == question.CorrectAnswer) {
                 int numberOfCorrectAnswers = (int)HttpContext.Current.Session["numberOfCorrectAnswers"];

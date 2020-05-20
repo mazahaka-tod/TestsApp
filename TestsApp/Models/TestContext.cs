@@ -18,7 +18,6 @@ namespace TestsApp.Models {
             // Вопрос 1
             db.Questions.Add(new Question {
                 Id = 1,
-                QuestionNumber = 1,
                 Name = "Асинхронные методы ...",
                 CorrectAnswer = "Уменьшают производительность отдельного запроса",
                 TestNumber = 1
@@ -27,7 +26,6 @@ namespace TestsApp.Models {
             // Вопрос 2
             db.Questions.Add(new Question {
                 Id = 2,
-                QuestionNumber = 2,
                 Name = "В чем отличие Web API приложения от MVC?",
                 CorrectAnswer = "Отсутствует представление",
                 TestNumber = 1
@@ -36,7 +34,6 @@ namespace TestsApp.Models {
             // Вопрос 3
             db.Questions.Add(new Question {
                 Id = 3,
-                QuestionNumber = 3,
                 Name = "Какой HTTP глагол используется для получения данных с сервера?",
                 CorrectAnswer = "GET",
                 TestNumber = 1
@@ -45,7 +42,6 @@ namespace TestsApp.Models {
             // Вопрос 4
             db.Questions.Add(new Question {
                 Id = 4,
-                QuestionNumber = 4,
                 Name = "Какой HTTP глагол используется для создания нового объекта?",
                 CorrectAnswer = "POST",
                 TestNumber = 1
@@ -54,278 +50,13 @@ namespace TestsApp.Models {
             // Вопрос 5
             db.Questions.Add(new Question {
                 Id = 5,
-                QuestionNumber = 5,
                 Name = "Какой HTTP глагол используется для обновления существующего объекта?",
                 CorrectAnswer = "PUT",
                 TestNumber = 1
             });
 
-            // Вопрос 6
-            db.Questions.Add(new Question {
-                Id = 6,
-                QuestionNumber = 6,
-                Name = "Какой HTTP глагол используется для удаления объекта?",
-                CorrectAnswer = "DELETE",
-                TestNumber = 1
-            });
-
-            //// Вопрос 7
-            //db.Questions.Add(new Question {
-            //    Id = 7,
-            //    Name = "Безопасным глаголом является ...",
-            //    CorrectAnswer = "HEAD"
-            //});
-
-            //// Вопрос 8
-            //db.Questions.Add(new Question {
-            //    Id = 8,
-            //    Name = "Идемпотентным (но небезопасным) глаголом является ...",
-            //    CorrectAnswer = "PUT"
-            //});
-
-            //// Вопрос 9
-            //db.Questions.Add(new Question {
-            //    Id = 9,
-            //    Name = "Web API контроллеры используют пространство имен ...",
-            //    CorrectAnswer = "System.Web.Http"
-            //});
-
-            //// Вопрос 10
-            //db.Questions.Add(new Question {
-            //    Id = 10,
-            //    Name = "Какой из классов не относится к Web API?",
-            //    CorrectAnswer = "HttpApplication"
-            //});
-
-            //// Вопрос 11
-            //db.Questions.Add(new Question {
-            //    Id = 11,
-            //    Name = "Пространство имен System.Net.Http содержит ...",
-            //    CorrectAnswer = "типы, которые представляют HTTP-запросы и ответы"
-            //});
-
-            //// Вопрос 12
-            //db.Questions.Add(new Question {
-            //    Id = 12,
-            //    Name = "Какое из свойств не определяет класс ApiController?",
-            //    CorrectAnswer = "ViewBag"
-            //});
-
-            //// Вопрос 13
-            //db.Questions.Add(new Question {
-            //    Id = 13,
-            //    Name = "Какое из свойств не определяет класс HttpRequestMessage?",
-            //    CorrectAnswer = "HttpMethod"
-            //});
-
-            //// Вопрос 14
-            //db.Questions.Add(new Question {
-            //    Id = 14,
-            //    Name = "Какое из свойств не определяет класс HttpRequestContext?",
-            //    CorrectAnswer = "IsAuthenticated"
-            //});
-
-            //// Вопрос 15
-            //db.Questions.Add(new Question {
-            //    Id = 15,
-            //    Name = "Какое из свойств не определяет класс HttpControllerContext?",
-            //    CorrectAnswer = "HttpContext"
-            //});
-
-            //// Вопрос 16
-            //db.Questions.Add(new Question {
-            //    Id = 16,
-            //    Name = "Конфигурация Web API выполняется в файле ...",
-            //    CorrectAnswer = "App_Start/WebApiConfig.cs"
-            //});
-
-            //// Вопрос 17
-            //db.Questions.Add(new Question {
-            //    Id = 17,
-            //    Name = "Экземпляр класса HttpConfiguration доступен через ...",
-            //    CorrectAnswer = "все указанные свойства"
-            //});
-
-            //// Вопрос 18
-            //db.Questions.Add(new Question {
-            //    Id = 18,
-            //    Name = "Какое из свойств не определяет класс HttpConfiguration?",
-            //    CorrectAnswer = "Url"
-            //});
-
-
-
             // Варианты ответов
             IEnumerable<Answer> answerOptions = new List<Answer> {
-                //new Answer {
-                //    QuestionId = 18,
-                //    AnswerOption = "DependencyResolver" },
-                //new Answer {
-                //    QuestionId = 18,
-                //    AnswerOption = "Filters" },
-                //new Answer {
-                //    QuestionId = 18,
-                //    AnswerOption = "Routes" },
-                //new Answer {
-                //    QuestionId = 18,
-                //    AnswerOption = "Url" },
-
-                //new Answer {
-                //    QuestionId = 17,
-                //    AnswerOption = "статическое свойство Configuration класса GlobalConfiguration" },
-                //new Answer {
-                //    QuestionId = 17,
-                //    AnswerOption = "свойство Configuration класса HttpControllerContext" },
-                //new Answer {
-                //    QuestionId = 17,
-                //    AnswerOption = "свойство Configuration класса ApiController" },
-                //new Answer {
-                //    QuestionId = 17,
-                //    AnswerOption = "все указанные свойства" },
-
-                //new Answer {
-                //    QuestionId = 16,
-                //    AnswerOption = "App_Start/WebApiConfig.cs" },
-                //new Answer {
-                //    QuestionId = 16,
-                //    AnswerOption = "App_Start/RouteConfig.cs" },
-                //new Answer {
-                //    QuestionId = 16,
-                //    AnswerOption = "Global.asax.cs" },
-                //new Answer {
-                //    QuestionId = 16,
-                //    AnswerOption = "Web.config" },
-
-                //new Answer {
-                //    QuestionId = 15,
-                //    AnswerOption = "HttpContext" },
-                //new Answer {
-                //    QuestionId = 15,
-                //    AnswerOption = "Configuration" },
-                //new Answer {
-                //    QuestionId = 15,
-                //    AnswerOption = "Request" },
-                //new Answer {
-                //    QuestionId = 15,
-                //    AnswerOption = "RequestContext" },
-
-                //new Answer {
-                //    QuestionId = 14,
-                //    AnswerOption = "IsAuthenticated" },
-                //new Answer {
-                //    QuestionId = 14,
-                //    AnswerOption = "Configuration" },
-                //new Answer {
-                //    QuestionId = 14,
-                //    AnswerOption = "IsLocal" },
-                //new Answer {
-                //    QuestionId = 14,
-                //    AnswerOption = "RouteData" },
-
-                //new Answer {
-                //    QuestionId = 13,
-                //    AnswerOption = "HttpMethod" },
-                //new Answer {
-                //    QuestionId = 13,
-                //    AnswerOption = "Content" },
-                //new Answer {
-                //    QuestionId = 13,
-                //    AnswerOption = "Headers" },
-                //new Answer {
-                //    QuestionId = 13,
-                //    AnswerOption = "Properties" },
-
-                //new Answer {
-                //    QuestionId = 12,
-                //    AnswerOption = "ViewBag" },
-                //new Answer {
-                //    QuestionId = 12,
-                //    AnswerOption = "ControllerContext" },
-                //new Answer {
-                //    QuestionId = 12,
-                //    AnswerOption = "ModelState" },
-                //new Answer {
-                //    QuestionId = 12,
-                //    AnswerOption = "Request" },
-
-                //new Answer {
-                //    QuestionId = 11,
-                //    AnswerOption = "типы, которые представляют HTTP-запросы и ответы" },
-                //new Answer {
-                //    QuestionId = 11,
-                //    AnswerOption = "базовый класс Web API контроллеров ApiController" },
-                //new Answer {
-                //    QuestionId = 11,
-                //    AnswerOption = "классы, которые обеспечивают внедрение зависимостей" },
-                //new Answer {
-                //    QuestionId = 11,
-                //    AnswerOption = "классы, которые используются для валидации данных" },
-
-                //new Answer {
-                //    QuestionId = 10,
-                //    AnswerOption = "HttpApplication" },
-                //new Answer {
-                //    QuestionId = 10,
-                //    AnswerOption = "HttpRequestContext" },
-                //new Answer {
-                //    QuestionId = 10,
-                //    AnswerOption = "HttpResponseMessage" },
-                //new Answer {
-                //    QuestionId = 10,
-                //    AnswerOption = "HttpConfiguration" },
-
-                //new Answer {
-                //    QuestionId = 9,
-                //    AnswerOption = "System.Web" },
-                //new Answer {
-                //    QuestionId = 9,
-                //    AnswerOption = "System.Web.MVC" },
-                //new Answer {
-                //    QuestionId = 9,
-                //    AnswerOption = "System.Web.Http" },
-                //new Answer {
-                //    QuestionId = 9,
-                //    AnswerOption = "Все из указанных" },
-
-                //new Answer {
-                //    QuestionId = 8,
-                //    AnswerOption = "GET" },
-                //new Answer {
-                //    QuestionId = 8,
-                //    AnswerOption = "HEAD" },
-                //new Answer {
-                //    QuestionId = 8,
-                //    AnswerOption = "POST" },
-                //new Answer {
-                //    QuestionId = 8,
-                //    AnswerOption = "PUT" },
-
-                //new Answer {
-                //    QuestionId = 7,
-                //    AnswerOption = "HEAD" },
-                //new Answer {
-                //    QuestionId = 7,
-                //    AnswerOption = "POST" },
-                //new Answer {
-                //    QuestionId = 7,
-                //    AnswerOption = "PUT" },
-                //new Answer {
-                //    QuestionId = 7,
-                //    AnswerOption = "DELETE" },
-
-                new Answer {
-                    QuestionId = 6,
-                    AnswerOption = "GET" },
-                new Answer {
-                    QuestionId = 6,
-                    AnswerOption = "POST" },
-                new Answer {
-                    QuestionId = 6,
-                    AnswerOption = "PUT" },
-                new Answer {
-                    QuestionId = 6,
-                    AnswerOption = "DELETE" },
-
                 new Answer {
                     QuestionId = 5,
                     AnswerOption = "GET" },
@@ -397,7 +128,6 @@ namespace TestsApp.Models {
             db.Questions.Add(new Question
             {
                 Id = 101,
-                QuestionNumber = 101,
                 Name = "Microsoft SQL Server использует следующее процедурное расширение языка SQL ...",
                 CorrectAnswer = "Transact-SQL",
                 TestNumber = 2
@@ -407,7 +137,6 @@ namespace TestsApp.Models {
             db.Questions.Add(new Question
             {
                 Id = 102,
-                QuestionNumber = 102,
                 Name = "Transact-SQL расширяет язык SQL, предоставляя следующую дополнительную возможность ...",
                 CorrectAnswer = "все из указанных",
                 TestNumber = 2
@@ -417,7 +146,6 @@ namespace TestsApp.Models {
             db.Questions.Add(new Question
             {
                 Id = 103,
-                QuestionNumber = 103,
                 Name = "Выражения языка DDL (Data Definition Language) ...",
                 CorrectAnswer = "используются для создания, изменения или удаления объектов в базе данных",
                 TestNumber = 2
@@ -427,7 +155,6 @@ namespace TestsApp.Models {
             db.Questions.Add(new Question
             {
                 Id = 104,
-                QuestionNumber = 104,
                 Name = "Выражения языка DCL (Data Control Language) ...",
                 CorrectAnswer = "предназначены для назначения прав на объекты базы данных",
                 TestNumber = 2
@@ -437,7 +164,6 @@ namespace TestsApp.Models {
             db.Questions.Add(new Question
             {
                 Id = 105,
-                QuestionNumber = 105,
                 Name = "Выражения языка DML (Data Manipulation Language) ...",
                 CorrectAnswer = "используются для запросов и изменения данных",
                 TestNumber = 2
@@ -511,8 +237,123 @@ namespace TestsApp.Models {
                     AnswerOption = "SQL PL" }
             };
 
+            ////////////////////////////////////// ASP.NET Core MVC
+            // Вопрос 1
+            db.Questions.Add(new Question
+            {
+                Id = 201,
+                Name = "Соглашением по конфигурации является ...",
+                CorrectAnswer = "все из указанных",
+                TestNumber = 3
+            });
+
+            // Вопрос 2
+            db.Questions.Add(new Question
+            {
+                Id = 202,
+                Name = "Выражения Razor начинаются с символа ...",
+                CorrectAnswer = "@",
+                TestNumber = 3
+            });
+
+            // Вопрос 3
+            db.Questions.Add(new Question
+            {
+                Id = 203,
+                Name = "Какое выражение Razor можно использовать для установки значений атрибутов элементов в представлении?",
+                CorrectAnswer = "@Model или @ViewBag",
+                TestNumber = 3
+            });
+
+            // Вопрос 4
+            db.Questions.Add(new Question
+            {
+                Id = 204,
+                Name = "Какой префикс нужно использовать, чтобы вставить литеральный текст в блок кода Razor в представлении?",
+                CorrectAnswer = "@:",
+                TestNumber = 3
+            });
+
+            // Вопрос 5
+            db.Questions.Add(new Question
+            {
+                Id = 205,
+                Name = "Какой оператор C# можно применять в представлении Razor?",
+                CorrectAnswer = "все из указанных",
+                TestNumber = 3
+            });
+
+            // Варианты ответов
+            IEnumerable<Answer> answerOptionsASPNETCoreMVC = new List<Answer> {
+                new Answer {
+                    QuestionId = 205,
+                    AnswerOption = "@switch" },
+                new Answer {
+                    QuestionId = 205,
+                    AnswerOption = "@if" },
+                new Answer {
+                    QuestionId = 205,
+                    AnswerOption = "@foreach" },
+                new Answer {
+                    QuestionId = 205,
+                    AnswerOption = "все из указанных" },
+
+                new Answer {
+                    QuestionId = 204,
+                    AnswerOption = "@%" },
+                new Answer {
+                    QuestionId = 204,
+                    AnswerOption = "@#" },
+                new Answer {
+                    QuestionId = 204,
+                    AnswerOption = "@:" },
+                new Answer {
+                    QuestionId = 204,
+                    AnswerOption = "@>" },
+
+                new Answer {
+                    QuestionId = 203,
+                    AnswerOption = "@Model" },
+                new Answer {
+                    QuestionId = 203,
+                    AnswerOption = "@ViewBag" },
+                new Answer {
+                    QuestionId = 203,
+                    AnswerOption = "@Model или @ViewBag" },
+                new Answer {
+                    QuestionId = 203,
+                    AnswerOption = "выражения Razor нельзя использовать для установки значений атрибутов" },
+
+                new Answer {
+                    QuestionId = 202,
+                    AnswerOption = "#" },
+                new Answer {
+                    QuestionId = 202,
+                    AnswerOption = "$" },
+                new Answer {
+                    QuestionId = 202,
+                    AnswerOption = "@" },
+                new Answer {
+                    QuestionId = 202,
+                    AnswerOption = "%" },
+
+                new Answer {
+                    QuestionId = 201,
+                    AnswerOption = "контроллеры имеют имена, которые заканчиваются на Controller, и находятся в папке Controllers" },
+                new Answer {
+                    QuestionId = 201,
+                    AnswerOption = "представления помещаются в папку /Views/ИмяКонтроллера/ИмяДействия.cshtml" },
+                new Answer {
+                    QuestionId = 201,
+                    AnswerOption = "имена файлов макетов имеют префикс в виде символа подчеркивания и размещаются в папке /Views/Shared" },
+                new Answer {
+                    QuestionId = 201,
+                    AnswerOption = "все из указанных" }
+            };
+
             db.Answers.AddRange(answerOptions);
             db.Answers.AddRange(answerOptionsSQL);
+            db.Answers.AddRange(answerOptionsASPNETCoreMVC);
             db.SaveChanges();
         }
     }
