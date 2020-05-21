@@ -2,7 +2,7 @@
     ViewBag.Title = "Tests";
 }
 
-<div class="text-center" style="margin-top:100px;" data-bind="visible: model.view() == 'start'">
+<div id="selectTest" class="text-center" data-bind="visible: model.view() == 'start'">
     <div class="form-group">
         <label for="test_number"><b>Выберите тест:</b></label>
         <select class="form-control offset-4 col-4" id="test_number">
@@ -11,8 +11,8 @@
             <option value="1">Тест на знание Web API</option>
         </select>
     </div>
-    <button class="btn btn-primary" style="margin-top:100px" data-bind="click: showQuestion">Начать тест</button>
-    <div id="wait" style="margin-top:20px"></div>
+    <button id="startTest" class="btn btn-primary" data-bind="click: showQuestion">Начать тест</button>
+    <div id="wait"></div>
 </div>
 
 <div data-bind="visible: model.view() == 'form'">
@@ -21,26 +21,26 @@
         <div class="card-body">
 
             <div class="form-group">
-                <div class="form-control border-primary text-primary font-weight-bold" style="height:auto;">
+                <div class="form-control border-primary text-primary font-weight-bold">
                     <label data-bind="text: model.test.question()"></label>
                 </div>
 
-                <div class="form-control" style="height:auto;margin-top:15px;">
+                <div class="form-control">
                     <input type="radio" id="answer_1" name="answer" data-bind="value: model.test.answers()[0]" />
                     <label for="answer_1" data-bind="text: model.test.answers()[0]"></label>
                 </div>
 
-                <div class="form-control" style="height:auto;margin-top:15px;">
+                <div class="form-control">
                     <input type="radio" id="answer_2" name="answer" data-bind="value: model.test.answers()[1]" />
                     <label for="answer_2" data-bind="text: model.test.answers()[1]"></label>
                 </div>
 
-                <div class="form-control" style="height:auto;margin-top:15px;">
+                <div class="form-control">
                     <input type="radio" id="answer_3" name="answer" data-bind="value: model.test.answers()[2]" />
                     <label for="answer_3" data-bind="text: model.test.answers()[2]"></label>
                 </div>
 
-                <div class="form-control" style="height:auto;margin-top:15px;">
+                <div class="form-control">
                     <input type="radio" id="answer_4" name="answer" data-bind="value: model.test.answers()[3]" />
                     <label for="answer_4" data-bind="text: model.test.answers()[3]"></label>
                 </div>
@@ -68,7 +68,7 @@
     </div>
 
     <br />
-    <div>
+    <div class="text-center">
         @Html.ActionLink("Пройти тест еще раз", "Index", "Home", null, new { @class = "btn btn-primary" })
     </div>
 </div>

@@ -16,3 +16,43 @@ textarea {
     max-width: 280px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    display: table;
+    height: 100%;
+}
+
+.content {
+    display: table-row;
+    height: 100%;
+}
+
+div#wait {
+    margin-top: 20px;
+}
+
+div.form-control {
+    height: auto;
+    margin-bottom: 15px;
+}
+
+div.form-control > label {
+    display: inline;
+}
+
+button#startTest {
+    margin-top: 100px;
+}
+
+div#selectTest {
+    margin-top: 100px;
+}
